@@ -20,3 +20,36 @@ school_data = {
     '2a': 13,
     '2b': 30
 }
+
+
+def incr_students(data: dict, key: str) -> tuple:
+    for value in data.values():
+        return key, data[key] + 1
+
+
+def decr_students(data: dict, key: str) -> tuple:
+    for value in data.values():
+        if value == 0:
+            raise ValueError("The number of students in a class cannot be less than 0.")
+        return key, data[key] - 1
+
+
+def add_class(data: dict, key: str) -> dict:
+    data.setdefault(key, 0)
+    return data
+
+
+def remove_class(data: dict, key: str) -> dict:
+    data.pop(key)
+    return data
+
+
+def calc_students(data: dict) -> int:
+    return sum(data.values())
+
+
+# print(incr_students(school_data, "2b"))
+# print(decr_students(school_data, "2b"))
+# print(add_class(school_data, "3b"))
+# print(remove_class(school_data, "2b"))
+# print(calc_students(school_data))
