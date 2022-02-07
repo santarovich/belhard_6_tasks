@@ -46,10 +46,3 @@ def remove_class(data: dict, key: str) -> dict:
 
 def calc_students(data: dict) -> int:
     return sum(data.values())
-
-
-# print(incr_students(school_data, "2b"))
-# print(decr_students(school_data, "2b"))
-# print(add_class(school_data, "3b"))
-# print(remove_class(school_data, "2b"))
-# print(calc_students(school_data))
