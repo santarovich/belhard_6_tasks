@@ -22,16 +22,14 @@ school_data = {
 }
 
 
-def incr_students(data: dict, key: str) -> tuple:
-    for value in data.values():
-        return key, data[key] + 1
+def incr_students(data: dict, key: str) -> int:
+    data[key] += 1
+    return data[key]
 
 
-def decr_students(data: dict, key: str) -> tuple:
-    for value in data.values():
-        if value == 0:
-            raise ValueError("The number of students in a class cannot be less than 0.")
-        return key, data[key] - 1
+def decr_students(data: dict, key: str) -> int:
+    data[key] -= 1
+    return data[key]
 
 
 def add_class(data: dict, key: str) -> dict:
