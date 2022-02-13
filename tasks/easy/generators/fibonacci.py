@@ -12,3 +12,13 @@ next(fibonacci_gen) -> 3
 next(fibonacci_gen) -> 5
 next(fibonacci_gen) -> 8
 """
+
+
+def fibonacci():
+    first, second = 0, 1
+    for _ in range(7):
+        yield second
+        first, second = second, first + second
+
+
+fibonacci_gen = fibonacci()
