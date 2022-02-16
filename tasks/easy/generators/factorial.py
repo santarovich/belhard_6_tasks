@@ -19,8 +19,10 @@ def factorial():
         yield number
 
 
-factorial_gen = factorial()
-print(next(factorial_gen))
-print(next(factorial_gen))
-print(next(factorial_gen))
-print(next(factorial_gen))
+# def factorial():
+#     current = 1
+#     result = 1
+#     while True:
+#         result *= current
+#         yield result
+#         current += 1
