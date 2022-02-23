@@ -20,3 +20,27 @@ school_data = {
     '2a': 13,
     '2b': 30
 }
+
+
+def incr_students(data: dict, key: str) -> int:
+    data[key] += 1
+    return data[key]
+
+
+def decr_students(data: dict, key: str) -> int:
+    data[key] -= 1
+    return data[key]
+
+
+def add_class(data: dict, key: str) -> dict:
+    data.setdefault(key, 0)
+    return data
+
+
+def remove_class(data: dict, key: str) -> dict:
+    data.pop(key)
+    return data
+
+
+def calc_students(data: dict) -> int:
+    return sum(data.values())
