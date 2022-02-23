@@ -16,7 +16,8 @@ next(fibonacci_gen) -> 8
 
 def fibonacci():
     first, second = 0, 1
-    for _ in range(7):
+    # for _ in range(7):
+    while True:
         yield second
         first, second = second, first + second
 

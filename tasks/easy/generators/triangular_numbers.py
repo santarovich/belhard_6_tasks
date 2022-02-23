@@ -20,10 +20,7 @@ next(tn_gen) -> 21
 
 
 def triangular_numbers():
-    for n in range(1, 7):
-        number = 0.5 * n * (n + 1)
-        yield number
-        number += 1
-
-
-tn_gen = triangular_numbers()
+    n = 1
+    while True:
+        yield 0.5 * n * (n + 1)
+        n += 1
